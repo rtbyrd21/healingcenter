@@ -1,0 +1,749 @@
+//Susy setup
+$total-columns  : 12;
+$column-width   : 4em;
+$gutter-width   : 1em;
+$grid-padding   : $gutter-width;
+
+@include border-box-sizing;
+
+$small          : 30em;
+$medium         : 47em;
+$large          : 75em;
+
+
+
+//CONTENT
+.layout{
+  @include container;
+  margin-left: auto;
+  margin-right: auto;
+  &:first-of-type{
+  padding-left: 0px;
+  padding-right: 0px;
+  p, h3{
+  padding-left:25px;
+  }
+    @include at-breakpoint($medium) {
+     padding-left: 1em;
+  padding-right: 1em; 
+  p, h3{
+  padding-left:0px;
+  }
+  }//medium
+  }//first-of-type
+} //Content layout
+.content{
+@include clearfix;
+}
+//HEADER
+header{
+ 
+  
+  
+
+  .hero{
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 250px;
+      @include background(image-url('misc/good_exteriorbrightfixed.jpg'));
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: scroll;
+      margin: 0 auto;
+    h2{
+    text-transform: uppercase;  
+    text-align: center;
+    position:absolute;
+    font-family: $font-secondary;
+    color:white;
+    top:185px;
+    font-size:1rem;
+    font-weight:600;
+    text-shadow: 0 2px 0 rgba(0,0,0,0.7);
+    background: rgba(0,0,0,.8);
+    width:100%;
+    padding:14px;
+    }//h2
+    
+    
+    @include at-breakpoint($medium) {
+    background-position: left top;
+    height: 500px;
+    h2{
+    top:70%;
+    font-size:3rem;
+    background:none;
+    padding:0px;
+    }//h2
+
+    } //medium
+  } //hero
+} //header
+.hero .nav a {
+  
+background: #000;
+bottom: 0;
+color: #fff;
+display: block;
+height: 110px;
+position: absolute;
+top: 20%;
+text-align: center;
+width: 50px;
+z-index: 4;
+opacity:.7;
+width: 30px;
+i{
+  margin-top:45px;
+  }
+@include at-breakpoint($medium) {
+top: 50%;
+height: 110px;
+text-align: center;
+width: 50px;
+
+@include single-transition(all, .2s, ease-out);
+  &:hover{
+  opacity:1;
+  }
+
+}//medium
+}
+
+.next {
+right: 0;
+}
+
+//Navigation
+
+.branding{
+        @include at-breakpoint($medium) {
+        position:absolute;
+        margin-bottom: -60px;
+        height:110%;
+        top: 0px;
+        img{
+          width: 320px;
+          background: rgba(255,255,255,1);
+          display: block;
+          max-width: 230px; margin-left: 0%; box-shadow: rgb(51, 51, 51) 0px 0px 5px; padding-bottom: 4%;
+          @include single-transition(all, .07s, ease-out);
+        }
+        }//medium
+      } //branding
+.navigation{
+  display:block;
+  height:90px;
+  @include background(image-url('misc/hc%20logo_full.svg'));
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: $hcsoftwhite;
+  .nav{
+  display:none;
+  }
+  
+  @include at-breakpoint($medium) {
+  height:80px;
+  position:fixed;
+  background: rgba(255,255,255,.6);
+  min-height: 60px;
+  z-index:9999;
+  width:100%;
+  @include single-transition(all, .7s, ease-out);
+  ul.nav{
+    @include at-breakpoint($small){
+      @include horizontal-list;
+      font-family: $font-secondary, sans-serif;
+      float:right;
+      margin-right: 5%;
+      display:inline-block;
+    }
+    li{
+      
+      a{
+        @include single-transition(all, .2s, ease-out);
+        display: block;
+        text-decoration: none;
+        padding: 5px 10px;
+        color: black;
+        line-height: 60px;
+        font-size: 1.2rem;
+        &:hover{
+          color: $hcblue;
+        }
+        
+      }//a
+    }//li
+  }//ul.nav
+}//medium
+}//nav
+
+
+
+//SPEAKERS LIST
+.speakers{
+.artist{
+  .toHide{
+      padding-bottom: 20px;
+    @include at-breakpoint($medium){
+    padding-bottom: 0px;
+    }
+    }
+  &:last-of-type{
+  margin-bottom:1%;
+    @include at-breakpoint($medium){
+    margin-bottom:0%;
+    }
+  }
+}
+.leaderimage{
+    
+    width:100%;
+    height:180px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top:0%;
+    
+  
+  @include at-breakpoint($medium){
+    width:90%;
+    height:200px;
+    margin-top:9%;
+  }//medium
+   
+  }//leaderimage
+div:nth-of-type(1) .leaderimage{
+    @include background(image-url('artwork/weare.png'));
+    background-attachment: scroll;
+    background-size: cover;
+    @include at-breakpoint($medium){
+      background-size:inherit;
+    }
+    background-repeat: no-repeat;
+}
+ div:nth-of-type(2) .leaderimage{
+    @include background(image-url('artwork/wedo.png'));
+   background-attachment: scroll;
+    background-size: cover;
+    @include at-breakpoint($medium){
+      background-size:inherit;
+    }
+    background-repeat: no-repeat;
+}
+   div:nth-of-type(3) .leaderimage{
+    @include background(image-url('artwork/expect.png'));
+     background-attachment: scroll;
+    background-size: cover;
+    @include at-breakpoint($medium){
+      background-size:inherit;
+    }
+    background-repeat: no-repeat;
+}
+  h3{
+      color: $hcblue;
+      padding-top: 20px;
+      font-weight:200;
+      font-size:2.2rem;
+      background-color: rgba(255,255,255,.8);
+      position:absolute;
+      width:100%;
+      top:120px;
+    @include at-breakpoint($medium){
+    background-color: none;
+    position:inherit;
+    top:0px;
+    }
+    }//h3
+  .artist{
+    
+    position: relative;
+    @include box-shadow;
+    @include single-transition(all, .2s, ease-out);
+    cursor:pointer;
+    background-color: rgba(255,255,255,.5);
+    
+    i{
+    display: block;
+    float: right;
+    margin-right: 5%;
+    }
+  }
+   .artist:nth-of-type(2) {
+      h3{
+      color: $hcyellow;
+      }
+      a:hover{
+       background: $hcyellow;
+      }
+    }
+  
+    .artist:nth-of-type(3) {
+      h3{
+      color: $hcred;
+      }
+      a:hover{
+       background: $hcred;
+      }
+     
+    }
+  a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $font-secondary;
+    border:2px solid black;
+    padding:2%;
+    color: black;
+    cursor: pointer;
+    @include single-transition(all, .3s, ease-out);
+    margin-left:25px;
+    display: block;
+    width:140px;
+    @include at-breakpoint($medium){
+      margin-left:0px;
+    }//medium a
+    &:hover{
+       background: $hcblue;
+        color:white;
+      }
+     }
+    p{
+      padding-top: 20px;
+      padding-bottom:20px;
+      } 
+@include at-breakpoint($medium){
+    
+    #{headings()}{
+      text-shadow: none;
+      border-bottom: none !important;
+    }//headings
+    .artist{
+        box-shadow:none;
+        height:100%;
+        @include span-columns(4,12);
+        margin-top:20px;
+        margin-right: 0px !important;
+        position: relative;
+        width:33.33%;
+        padding-bottom: 10px;
+      i{
+      visibility: hidden;
+      }
+      p{
+      padding-top: 0px;
+      } 
+      }
+    
+   
+    
+
+  }//medium  
+} //speakerslist
+
+
+
+
+//DONORS PARTNERS VOLUNTEERS
+.secondrow {
+  @include span-columns(12, 12);//TILES OVERALL GRID SMALL
+  @include clearfix;
+  .content{
+    padding-top: 30px;
+    padding-left: 3px;
+    padding-right: 3px;
+    @include at-breakpoint($medium){
+    padding-right: 0px;
+    }
+  }//content
+  @include at-breakpoint($medium){
+  @include span-columns(12, 12);//TILES OVERALL GRID MEDIUM
+  margin-top: 10px;
+  
+
+  .address{
+  margin-right: 0px !important;
+  @include border-radius;
+  @include span-columns(3, 12);//TILES OVERALL GRID
+  border:2px solid $hcgrey;
+  background: $hcgrey;
+  height:400px;
+  padding:1%;
+  p{
+  padding-right:15px;
+  }
+}//address 
+}//medium
+}//second row
+
+//HC PROMO
+
+
+
+.hcpromo{
+  @include at-breakpoint($medium){
+  padding-right: 25px;
+  }//medium
+  
+  .promoitem{
+    color:white;
+    @include border-radius;
+    @include single-transition(all, .1s, ease-out);
+    @include span-columns(6,12);//small TILE GRID
+    position: relative;
+    cursor:pointer;
+    @include box-shadow;
+    height:250px;
+    margin-bottom: 3%;
+     h4{
+      background-color:white;
+      text-align: left;
+      color:black;
+      font-size: 1.7rem;
+       text-transform: uppercase;
+      position:absolute;
+      bottom:0px;
+      width:100%;
+      text-align: center;
+      padding-bottom: 10px;
+     }
+    a{
+     display:none; 
+    }
+    p{
+     padding:9px;
+      position:absolute;
+      top:10px;
+     }
+    @include at-breakpoint($medium){
+    color:black;
+    @include span-columns(3,12);//MEDIUM TILE GRID
+    height:400px;
+    padding:3%;
+     &:hover{
+    -moz-transform:scale(1.05); 
+    -webkit-transform:scale(1.05);
+    -o-transform:scale(1.05);
+      z-index: 99;
+        p{
+        color:white;
+        }
+    }//hover magnify
+      
+     h4{
+      top:130px;
+      background-color:rgba(255,255,255,.0);
+      width:auto;
+      text-align: inherit;
+       padding-bottom: 0px;
+     }
+     p{
+     padding-top:5px;
+      position:absolute;
+      top:170px;
+     }
+    a{
+    display:block; 
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $font-secondary;
+    border:2px solid white;
+    padding:2%;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 7%;
+    @include single-transition(all, .3s, ease-out);
+    &:hover{
+       background: $hcblue;
+        color:white;
+      } 
+    }
+  
+    }//medium
+      
+  }//promoitem
+
+.promoitem:nth-of-type(1){//SUPPORT TILE
+  background-color: $hcyellow;
+  @include at-breakpoint($medium) {
+  @include background(image-url('artwork/grocery_bw.png'));
+  background-repeat: no-repeat;
+  background-color: white;
+  margin-left: 0%;
+  }//medium background image
+    h4{
+    color:$hcyellow;
+      }
+    a{
+    color:$hcyellow;
+    border-color: $hcyellow;
+     }//a
+    @include at-breakpoint($medium) {
+    &:hover{
+    @include background(image-url('artwork/grocery.png'));
+    background-repeat: no-repeat;
+    background-color: $hcyellow;
+      h4{
+      color:white;
+      }//h4
+      a{
+      color:white;
+      border-color: white;
+        &:hover{
+        color:$hcyellow;
+        background: white;
+        border-color: white;
+        }//a hover
+     }//a
+    }//promo hover
+      }//medium
+  }//promoitem
+  
+.promoitem:nth-of-type(2){//JOBS TILE
+  margin-right: 0%;
+  @include at-breakpoint($medium) {
+  margin-right: 1.69492%;
+  @include background(image-url('artwork/jobs_bw.png'));
+  background-repeat: no-repeat;
+  background-color: white;
+    h4{
+    color:$hcred;
+      }
+    a{
+    color:$hcred;
+    border-color: $hcred;
+     }//a
+    &:hover{
+    @include background(image-url('artwork/jobs.png'));
+    background-repeat: no-repeat;
+    background-color: $hcred;
+      h4{
+      color:white;
+      }//h4
+      a{
+      color:white;
+      border-color: white;
+        &:hover{
+        color:$hcred;
+        background: white;
+        border-color: white;
+        }//a hover
+     }//a
+    }//promo hover
+  }//medium
+  }//promoitem
+  
+  
+.promoitem:nth-of-type(3){//SUPPORT TILE
+  @include at-breakpoint($medium) {
+  @include background(image-url('artwork/donors_bw.png'));
+  background-repeat: no-repeat;
+  background-color: white;
+    h4{
+    color:$hcblue;
+      }
+    a{
+    color:$hcblue;
+    border-color: $hcblue;
+     }//a
+    &:hover{
+    @include background(image-url('artwork/donors.png'));
+    background-repeat: no-repeat;
+    background-color: $hcblue;
+      h4{
+      color:white;
+      }//h4
+      a{
+      color:white;
+      border-color: white;
+        &:hover{
+        color:$hcblue;
+        background: white;
+        border-color: white;
+        }//a hover
+     }//a
+    }//promo hover
+  }//medium
+  }//promoitem
+ 
+}//hcpromo
+
+
+
+
+
+
+
+
+
+
+
+//THIRD ROW//////////////
+.thirdrow{
+  @include at-breakpoint($medium){
+  @include span-columns(12,12);
+    margin-top:-45px;
+    .content{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    
+  }//content
+    .promoitem{
+    @include span-columns(3,12);
+
+    }//Partners & Volunteer
+    .promoitem:nth-of-type(1){//PARTNER TILE
+  @include background(image-url('artwork/clothes_bw.png'));
+  background-repeat: no-repeat;
+  background-color: white;
+  margin-left: 0%;
+    h4{
+    color:$hcyellow;
+      }
+    a{
+    color:$hcyellow;
+    border-color: $hcyellow;
+     }//a
+    &:hover{
+    @include background(image-url('artwork/clothes.png'));
+    background-repeat: no-repeat;
+    background-color: $hcyellow;
+      h4{
+      color:white;
+      }//h4
+      a{
+      color:white;
+      border-color: white;
+        &:hover{
+        color:$hcyellow;
+        background: white;
+        border-color: white;
+        }//a hover
+     }//a
+    }//promo hover
+  }//promoitem
+  
+.promoitem:nth-of-type(2){//JOBS TILE
+  @include background(image-url('artwork/volunteers_bw.png'));
+  background-repeat: no-repeat;
+  background-color: white;
+    h4{
+    color:$hcred;
+      }
+    a{
+    color:$hcred;
+    border-color: $hcred;
+     }//a
+    &:hover{
+    @include background(image-url('artwork/volunteers.png'));
+    background-repeat: no-repeat;
+    background-color: $hcred;
+      h4{
+      color:white;
+      }//h4
+      a{
+      color:white;
+      border-color: white;
+        &:hover{
+        color:$hcred;
+        background: white;
+        border-color: white;
+        }//a hover
+     }//a
+    }//promo hover
+  }//promoitem
+//LOCATION
+.location{
+  @include span-columns(6, 12);//MAP OVERALL GRID
+  border:2px solid $hcgrey;
+  margin-right: 0px !important;
+  @include border-radius;
+  height:400px;
+  padding:0% 0% 0% 2%;
+  background: $hcgrey;
+  .map{
+    p{
+    font-size: .8rem;
+    }
+     h3 {
+    padding-top: 20px;
+    font-weight: 200;
+    font-size: 2.25rem;
+    }//h3
+    #map-canvas{
+      width:95%;
+      height:210px;
+      margin-top: 10px;
+      box-shadow: 10 0 25px rgba(0,0,0,1) inset;
+    }//#map-canvas
+   }//.map
+  }//location
+ }//medium
+}//thirdrow
+
+
+
+////////////SERVICES//////////////////////
+
+.index {
+  @include at-breakpoint($medium){
+    @include span-columns(4,12);
+width:285px;
+background: $hcgrey;
+padding-left:10%;
+padding-top:20px;
+}//medium
+  a{
+    text-decoration: none;
+    font-family: $font-secondary;
+  }//a
+}//.index
+
+.offerings{
+@include at-breakpoint($medium){
+    @include span-columns(8,12);
+    margin-top:20px;
+    h3{
+    font-size:3rem;
+    color:$hcblue;
+    }
+}
+
+}
+
+//FOOTER
+footer{
+  color: white;
+  background: rgb(32,32,32);
+  padding-bottom: 15px;
+  ul{
+  margin-top:2%;
+  width:100%;
+  }   
+  li{
+  float:left;
+  font-size: 1em;
+  }
+  li:last-of-type{
+  float:right;
+  color: white;
+  font-size:.8em;
+  }
+  .link{
+  float:right;
+  color: white;
+  font-size:.8em;
+  text-decoration: none;
+  }
+  a{
+    color:white;
+  cursor: pointer;
+    &:hover{
+    color: $hcblue;
+    }
+  }
+}

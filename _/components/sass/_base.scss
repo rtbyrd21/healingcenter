@@ -1,0 +1,87 @@
+@import url('http://fonts.googleapis.com/css?family=Merriweather:400,700,300,400italic');
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700');
+@import url('http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
+@import "compass/css3/box-shadow";
+@import "compass/utilities/general/clearfix";
+@import "compass/css3/border-radius";
+
+
+body{
+  font-family: $font-primary;
+  font-size: 1.2rem;
+  line-height:160%;
+  background: white;
+}
+
+#{headings()} { 
+  font-family: $font-secondary;
+  font-weight: normal;
+  color: $darkgray;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: black;
+  margin-bottom: .4rem;
+  border-bottom: 1px solid $lightgray;
+  padding-top: 10px;
+}
+h2 {
+  font-size: 1.5rem;
+  line-height:100%;
+  margin: 20px 0 0 0;
+  color: black;
+}
+
+h3 {
+  color: black;
+  line-height: 2rem;
+  font-size: 1.9rem;
+  letter-spacing: 0px;
+  font-weight: 700;
+  padding-bottom:10px;
+}
+
+h4{
+  padding-top: 10px;
+}
+a {
+  text-decoration: underline;
+  color: $mediumgray;
+  &:hover {
+    color: $orange;
+  }
+}
+
+p{
+  font-weight: 200 !important;
+  text-align: left;
+  font-size:  .9rem;
+  line-height: 1.9;
+  padding-right: 25px;
+
+}
+
+li{
+  font-weight: 200 !important;
+  text-align: left;
+  font-size:  .9rem;
+  line-height: 1.9;
+  padding-right: 25px;
+
+}
+
+input {
+border: 2px solid black; 
+display: block;
+height:30px;
+width:80%;
+padding-left:5px;
+margin-top: 10px;
+}
+
+input[type=text]{
+  font-size: 1rem;
+}
+
+

@@ -1,0 +1,83 @@
+//Social Media Icons
+.socialmediaicons {
+  .title{
+    float: left;
+  }
+  ul {
+    float: left;
+    li {
+      display: inline-block;
+      margin-left:  5px;
+      img {
+        width: 30px;
+        @include border-radius(50%);
+      } //img
+    } //li
+  } //ul  
+} //socialicons
+
+/* Form wrapper styling */
+.form-wrapper {
+    position: relative;
+    width: 95%;
+    box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+  input{
+    @include single-transition(all, .3s, ease-out);
+    width: 100%;
+    height: 40px;
+    padding: 10px 5px;
+    float: left;   
+    font: $font-primary;
+    border: 0;
+    background: lighten($hcgrey,5);
+    box-shadow: 0 0 5px rgba(0,0,0,.3) inset;
+    &:focus {
+    outline: 0;
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+}
+  }//input
+  button {
+    overflow: visible;
+    position: absolute;
+    float: right;
+    top:10px;
+    right:0px;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 40px;
+    width: 30%;
+    font: $font-secondary;
+    color: white;
+    text-transform: uppercase;
+    background: $hcred;
+    font-size:.9rem;
+    border: 2px solid $hcred;
+    letter-spacing: 1.2;
+    @include single-transition(all, .3s, ease-out);
+    &:hover{
+    background:white;
+    color:$hcred;
+    border: 2px solid $hcred;
+    }
+    &:focus {
+    outline: 0;
+  }
+  }//button
+  
+}
+
+
+.form-wrapper input::-webkit-input-placeholder {
+   color: #999;
+}
+
+.form-wrapper input:-moz-placeholder {
+    color: #999;
+}
+
+.form-wrapper input:-ms-input-placeholder {
+    color: #999;
+}   
+

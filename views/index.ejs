@@ -1,0 +1,148 @@
+
+
+
+<% include partials/template/head.ejs %>
+
+<body>
+ <header>
+   <% include partials/template/navigation.ejs %>
+  
+   
+
+    <div class="hero">
+    <h2>Support the healing center</h2>
+    <ul class="nav">
+      <li>
+        <a href="#prev" class="prev"><span class="screen-reader"></span>
+        <i class="fa fa-chevron-left"></i></a>
+      </li>
+      <li>
+        <a href="#next" class="next"><span class="screen-reader"></span><i class="fa fa-chevron-right"></i></a>
+      </li>
+    </ul>
+    
+    </div><!-- hero -->
+    
+   </header>
+
+
+<section class="layout">
+<section class="content">
+      <div class="speakers">
+          <% include partials/content/whoweare.ejs %>
+          <% include partials/content/whatwedo.ejs %>
+          <% include partials/content/whattoexpect.ejs %>
+      </div><!-- speakers --> 
+</section><!-- content -->
+</section><!-- layout --> 
+
+<section class="layout">
+<div class="secondrow">
+<section class="content">
+<div class="secondary">
+   <div class="hcpromo">
+   <div class="promoitem">
+   <h4>Support</h4>
+     <p>Support the Healing Center each time you shop at Kroger with the new Kroger Community Rewards program!</p>
+     <br>
+      <a>Learn more</a> 
+   </div><!-- promoitem1 -->
+   
+   <div class="promoitem">
+    <h4>Jobs</h4>
+     <p>If you need help with your job search, with skills to retain or adjust to your current job, or with finding fulfillment in your work, we're here to help. </p>
+     <br>
+     <a>Learn more</a>
+   </div><!-- promoitem2 -->
+   
+    <div class="promoitem">
+    <h4>Donors</h4>
+     <p>Whether you would like to donate your time, money, or material items, your contribution will impact lives in Cincinnati.  </p>
+     <a>Learn more</a> 
+     <!-- <a>Learn more</a> -->
+   </div><!-- promoitem3 -->
+   </div><!-- hcpromo -->
+   
+<div class="address">
+<h4>Contact Information</h4>
+<p>Healing Center Cincinnati<br>
+11345 Century Circle W.<br>
+Springdale, OH 45246<br>
+(513)346-4080</p>
+
+<h4>Office Hours</h4>
+<p>Tuesday - Friday, 8:30am - 5:00pm</p>
+<h4>Service Hours</h4>
+<p>Wednesday - Sat 9:00am - 12noon<br>
+Thursday evenings, 6:30-9pm</p>
+</div><!-- address -->
+  
+   </div><!-- secondary -->
+ </section><!-- content -->
+</div><!-- second row -->
+</section><!-- layout --> 
+
+
+<!-- address --> 
+<!-- address --> 
+<!-- address --> 
+<!-- address --> 
+<!-- address --> 
+
+<section class="layout">
+<div class="thirdrow">
+<section class="content">
+
+    <div class="hcpromo">
+     <div class="promoitem">
+    <h4>Partners</h4>
+     <p>If you need help with your job search, with skills to retain or adjust to your current job, or with finding fulfillment in your work, we're here to help. </p>
+     <br>
+      <a>Learn more</a> 
+   </div><!-- promoitem4 -->
+   
+    <div class="promoitem" id="last">
+    <h4>Volunteer</h4>
+     <p>If you need help with your job search, with skills to retain or adjust to your current job, or with finding fulfillment in your work, we're here to help. </p>
+     <br>
+      <a>Learn more</a> 
+   </div><!-- promoitem5 -->
+   </div><!-- hcpromo -->
+
+<!-- third row -->
+
+
+<section class="location">
+    <div class="map">
+      <h3>Our location</h3>
+        <p>The Healing Center is located in Tri-County on Kemper Road, across from Target.  
+   Enter your address below for detailed directions.</p>
+   <div class="map-container">
+   <div id="map-canvas"  id="map">
+     <i class="map-top"></i>
+    <i class="map-right"></i>
+    <i class="map-bottom"></i>
+    <i class="map-left"></i>
+      </div><!--map-canvas-->
+      </div><!--map-container-->
+</div>
+   <form class="form-wrapper cf" action="http://maps.google.com/maps" method="get" target="_blank">
+  <input type="text" name="saddr" placeholder=" your address">
+    <input type="hidden" name="daddr" value="11345 Century Circle W. Springdale, OH 45246" />
+  <button class="mapbutton" type="submit" value="Get directions" />Get Directions</button>
+</form> 
+     </section><!-- location -->
+                      
+</section><!-- content -->
+</div><!-- third row -->
+</section><!-- layout -->
+
+
+
+
+ <% include partials/template/footer.ejs %>
+
+
+<!--<script src="http://localhost:35729/livereload.js"></script>-->
+</body>
+</html>
