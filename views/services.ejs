@@ -1,0 +1,30 @@
+<% include partials/template/head.ejs %>
+
+<body>
+ <header>
+   <% include partials/template/navigation.ejs %>
+    <div class="hero">
+    </div><!-- hero -->
+   </header>
+
+<section class="content">
+<div class="index">
+  <ul>
+   <a href="/services/"><li>Service Overview</li></a>
+    <% appdata.services.forEach(function(item) { %>
+      <a href="/services/<%= item.shortname %>"><li><%= item.title %></li></a>
+    <% }); %>
+  </ul>
+</div>
+
+
+<div class="offerings">
+<!--  <h3>What we offer</h3>-->
+  <% include partials/content/serviceslist.ejs %>
+  
+</div>
+</section>
+
+ <% include partials/template/footer.ejs %>
+ </body>
+ </html>

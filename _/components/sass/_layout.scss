@@ -687,33 +687,7 @@ div:nth-of-type(1) .leaderimage{
 
 
 
-////////////SERVICES//////////////////////
 
-.index {
-  @include at-breakpoint($medium){
-    @include span-columns(4,12);
-width:285px;
-background: $hcgrey;
-padding-left:10%;
-padding-top:20px;
-}//medium
-  a{
-    text-decoration: none;
-    font-family: $font-secondary;
-  }//a
-}//.index
-
-.offerings{
-@include at-breakpoint($medium){
-    @include span-columns(8,12);
-    margin-top:20px;
-    h3{
-    font-size:3rem;
-    color:$hcblue;
-    }
-}
-
-}
 
 //FOOTER
 footer{
@@ -746,4 +720,45 @@ footer{
     color: $hcblue;
     }
   }
+}
+
+
+////////////SERVICES//////////////////////
+
+.index {
+  @include at-breakpoint($medium){
+    @include span-columns(4,12);
+width:285px;
+background: $hcgrey;
+padding-left:10%;
+padding-top:20px;
+height:100%;
+  ul{
+  margin-top:40px;
+  }
+}//medium
+  a{
+    text-decoration: none;
+    font-family: $font-secondary;
+  }//a
+}//.index
+
+.offerings{
+@include at-breakpoint($medium){
+    @include span-columns(8,12);
+    margin-top:20px;
+    h3{
+    font-size:2.5rem;
+    color:darken($hcgrey,30);
+    font-weight:200;
+    margin-top:40px;
+    }
+  p{
+  &:last-of-type{
+  margin-bottom:40px;
+  }
+  }
+  
+}
+
 }

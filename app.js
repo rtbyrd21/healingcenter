@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-var data = require('./data.json');
+app.locals.appdata = require('./data.json');
 app.use('/', routes);
 
 /// catch 404 and forward to error handler

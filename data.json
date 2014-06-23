@@ -1,25 +1,80 @@
 {
-  "name": "nodeapp",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
-  "dependencies": {
-    "express": "~4.2.0",
-    "static-favicon": "~1.0.0",
-    "morgan": "~1.0.0",
-    "cookie-parser": "~1.0.1",
-    "body-parser": "~1.0.0",
-    "debug": "~0.7.4",
-    "ejs": "~0.8.5",
-    "grunt": "~0.4.1",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-contrib-compass": "~0.5.0",
-    "grunt-contrib-uglify": "~0.2.2",
-    "matchdep": "~0.1.2"
-  },
-  "devDependencies": {
-    "grunt-express-server": "^0.4.17"
+  "services": [{
+    "title" : "Assessments",
+    "shortname" : "assessments",
+    "summary" : "Everyone who comes into the Healing Center has the opportunity to speak to someone about what is going on in their life. We offer referrals and serve as an advocate by networking with community resources. It is not our intention to reinvent the wheel, but rather partner with organizations that are already doing good work in the community.",
+    "description" : "Long Description."
+    },{
+    "title" : "Auto Clinic",
+    "shortname" : "auto_clinic",
+    "summary": "Volunteers evaluate car problems and make minor repairs. Labor is free, and the car owner pays for any needed parts. Oil changes are performed at a reduced cost. All services are performed on Saturdays.",
+    "description" : "Long Description."
+  },{
+    "title" : "Auto Donation Program",
+    "shortname" : "auto_donation_program",
+    "summary": "Donated vehicles find new homes through this program. Recipients are eligible to apply if they have been actively participating at Vineyard Cincinnati or The Healing Center under the guidelines of the program for six months.",
+    "description" : "<h2>Give your automobile to a new home to help a family in need</h2><p>Please contact Deena Casagrande at (513) 346-4080 Ext. 207 to make arrangements for auto donations. Please do not drop your car off in the parking lot.</p><h2>Tax Benefits</h2><p>It seems that every non-profit these days is encouraging you to donate your vehicle to charity and \"get a tax deduction.\" But there’s a simple distinction between donating your car to The Healing Center versus donating it almost anywhere else.</p><p>As of January 1, 2005, the rules on how much you can write off your taxes were tightened. If the organization sells your car, as most do, you can deduct only the amount they sold it for--and they may sell it for far less than it’s worth. However, if the organization gives your car to someone who will drive it, as The Healing Center does, you can claim full Blue Book value--a significant difference on your taxes. (It’s important to note that when you donate a vehicle, you receive a tax deduction, not a tax credit.)</p><h2>So where does your car end up? </h2><p>Those on the receiving end of The Healing Center’s auto donation program must fill out a detailed questionnaire, meet the eligibility requirements of the program, and be approved by the Benevolence Review Team. Vehicles are given to single parent families or individuals needing transportation for employment or who are enrolled in school to obtain employment.</p>"
+  },{
+    "title" : "Basic Needs",
+    "shortname" : "basic_needs",
+    "summary": "We provide food to families in need, and gently used seasonal clothing and basic household items."
+  },{
+    "title" : "Bicycle Repair",
+    "shortname" : "bicycle_repair",
+    "summary": "We repair donated bicycles and give them to Healing Center guests in need of transportation."
+  },{
+    "title" : "Childrens and Family programming",
+    "shortname" : "childrens_and_family_programming",
+    "summary": "Attend programs, events, and classes that support the needs of children and families, like tutoring for kids, enrichment activities, family literacy, parenting support, and much more."
+  },{
+    "title" : "Educational Programs",
+    "shortname" : "educational_programs",
+    "summary": "Tutors are available to help with coursework, English language proficiency, earning a GED, and overcoming barriers to literacy. We also offer ESL classes."
+  },{
+    "title" : "Health Care",
+    "shortname" : "health_care",
+    "summary": "Health care resources are currently limited to vision screening and eyeglasses, blood pressure/blood sugar screening, and annual health fairs for free mammograms, heart health screening, and osteoporosis screening."
+  },{
+    "title" : "Financial Counseling",
+    "shortname" : "financial_counseling",
+    "summary": "Do you find it difficult to keep up with all the monthly bills? Trained financial coaches are available to help people take the first steps in managing their money or getting out of debt."
+  },{
+    "title" : "Life Skills Training",
+    "shortname" : "life_skills_training",
+    "summary": "Attend events, classes, seminars, and small groups that equip you with life skills to help bring wholeness to your life. Classes include, but are not limited to, computer skills, listening skills, and conflict resolution."
+  },{
+    "title" : "Job Coaching",
+    "shortname" : "job_coaching",
+    "summary": "We provide job search assistance—including help with resumes, interviewing, and career planning—for those seeking employment or a career change. Limited job placement assistance is also available."
+  },{
+    "title" : "Kids ClubHouse",
+    "shortname" : "kids_clubhouse",
+    "summary": "The Kids ClubHouse is a safe place for kids to sing, play, and enjoy having fun while parents meet with staff or attend classes at the Healing Center."
+  },{
+    "title" : "Job Coaching",
+    "shortname" : "job_coaching",
+    "summary": "We provide job search assistance—including help with resumes, interviewing, and career planning—for those seeking employment or a career change. Limited job placement assistance is also available."
+  },{
+    "title" : "Ohio Benefit Bank",
+    "shortname" : "ohio_benefit_bank",
+    "summary": "The Healing Center is an Ohio Benefit Bank location.  This program is a collaboration between the Governor's office, local food banks, and local community agencies to help eligible guests receive public assistance benefits.  The Ohio Benefit Bank functions in the same spirit as the Healing Center - a one-stop shop with a focus on one-on-one care.  Healing Center guests will sit with one of our counselors to apply for a variety of programs at one time, saving them trips to multiple agencies all over town.  The programs range from FAFSA applications for college financial aid, and voter registration, to nutrition assistance, childcare vouchers, home energy assistance, and various medical coverage and support programs.  In 2012, the Healing Center helped guests apply for benefits with an estimated value of $632,322!"
+  },{
+    "title" : "Prayer and Devotions",
+    "shortname" : "prayer_and_devotions",
+    "summary": "It is our desire to minister to the whole person and that includes spiritual support. Please join us in our group devotional time, better known as Food for Thought, in which we build relationships and encourage one another toward greater personal growth, gain hope and draw closer to God."
+  },{
+    "title" : "Support Groups",
+    "shortname" : "support_groups",
+    "summary": "Groups are available at various times throughout the week. Boundaries, Grief Support, and 12-Step Recovery are only a few of the groups available."
+  },{
+    "title" : "Tax Preparation",
+    "shortname" : "tax_preparation",
+    "summary": "Tax preparation is by appointment only on Thursdays (for 2014:  January 30 through April 12) from 6:30-9:30pm and Saturdays from 9am-12noon.  Call Healing Center for appointment."
+  },{
+    "title" : "Veterans Services",
+    "shortname" : "veterans_services",
+    "summary": "Veterans, and their families seeking support with housing needs, may be eligible for assistance.  Click here for more information."
   }
+
+] 
 }

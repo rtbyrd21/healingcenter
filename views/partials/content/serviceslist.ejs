@@ -1,0 +1,23 @@
+<article class="serviceslist">
+  <section class="layout">
+    <div class="services">
+       <% list.forEach(function(item){ %>
+        <article class="service group">
+          <h3><%= item.title %></h3>
+            <% if (page!= 'servicesDetail') { %>
+            <p><%- item.summary %></p>
+            <% }else{ %>
+            <p><%- item.description %></p>
+            <% } %>
+            
+        </article>
+      <% }); %>
+    </div>
+    </section>
+</article>
+
+
+
+
+
+

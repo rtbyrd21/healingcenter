@@ -6,10 +6,10 @@ $(document).ready(function() {
     function checkWidth() {
         var windowsize = $window.width();
         if (windowsize > 750) {
-         $('.branding img').attr('src', 'images/misc/hc%20logo_full.svg');
+         $('.branding img').attr('src', '/images/misc/hc%20logo_full.svg');
 $(window).scroll(function () {
     if ($(document).scrollTop() < 290) {
-        $('.branding img').attr('src', 'images/misc/hc%20logo_full.svg');
+        $('.branding img').attr('src', '/images/misc/hc%20logo_full.svg');
         $('.branding').css({marginBottom: "-60px"});
        // $('.branding').css({border: "1px solid black"});
         $('.branding img').css({maxWidth: "230px"});
@@ -21,7 +21,7 @@ $(window).scroll(function () {
         $('.navigation').css({boxShadow: "none"});
         $('.branding').css({top: "0px"});
     } else {
-        $('.branding img').attr('src', 'images/misc/hc_logo_textonly.svg');
+        $('.branding img').attr('src', '/images/misc/hc_logo_textonly.svg');
         $('.branding').css({marginBottom: "0px"});
         $('.branding').css({top: "5px"});
         $('.branding').css({border: "0px"});
