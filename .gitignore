@@ -1,0 +1,10 @@
+.DS_Store
+*.log
+*.sqlite3
+*.sql
+config/database.yml
+db/schema.rb
+tmp/**/*
+Thumbs.db
+*.dmg
+*.sass-cache*
