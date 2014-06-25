@@ -4,8 +4,10 @@
 <% include partials/template/head.ejs %>
 
 <body>
+<% include partials/template/navigation.ejs %>
+<div id="sb-site">
  <header>
-   <% include partials/template/navigation.ejs %>
+   
   
    
 
@@ -136,14 +138,36 @@ Thursday evenings, 6:30-9pm</p>
                       
 </section><!-- content -->
 </div><!-- third row -->
+
+
+
 </section><!-- layout -->
 
 
+<div class="appendable"></div>
 
 
  <% include partials/template/footer.ejs %>
 
+</div><!--Body container for slider logic-->
 
-<!--<script src="http://localhost:35729/livereload.js"></script>-->
+<div class="sb-slidebar sb-left">
+    <ul>
+      <a><li>Who we are</li></a>
+      <a><li>What we do</li></a>
+      <a><li>What to expect</li></a>
+      <a><li>Support</li></a>
+      <a><li>Jobs</li></a>
+      <a><li>Donors</li></a>
+      <a><li>Partners</li></a>
+      <a><li>Volunteer</li></a>
+      <a><li>Location</li></a>
+      <a><li>Contact</li></a>
+    </ul>
+
+<% include partials/template/sidebarlogic.ejs %>
+
+
+<!--<script src="http://localhost:35729/livereload.js"></script> -->
 </body>
 </html>

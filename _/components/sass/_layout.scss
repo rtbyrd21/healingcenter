@@ -14,14 +14,18 @@ $large          : 75em;
 
 //CONTENT
 .layout{
-  padding-left: 5px !important;
-  padding-right: 5px !important;
+  padding-left: 5px;
+  padding-right: 5px;
   @include container;
   margin-left: auto;
   margin-right: auto;
   &:first-of-type{
   padding-left: 0px;
   padding-right: 0px;
+  margin-top: 100px;
+  @include at-breakpoint($medium) {
+  margin-top: 0px;
+  }
   p, h3{
   padding-left:25px;
   }
@@ -39,11 +43,7 @@ $large          : 75em;
 }
 //HEADER
 header{
- 
-  
-  
-
-  .hero{
+ .hero{
       position: relative;
       display: block;
       width: 100%;
@@ -54,6 +54,7 @@ header{
       background-size: cover;
       background-attachment: scroll;
       margin: 0 auto;
+      top:100px;
     h2{
     text-transform: uppercase;  
     text-align: center;
@@ -73,6 +74,7 @@ header{
     @include at-breakpoint($medium) {
     background-position: left top;
     height: 500px;
+    top:0px;
     h2{
     top:70%;
     font-size:3rem;
@@ -100,6 +102,8 @@ width: 30px;
 i{
   margin-top:45px;
   }
+  
+  
 @include at-breakpoint($medium) {
 top: 50%;
 height: 110px;
@@ -137,49 +141,72 @@ right: 0;
       } //branding
 .navigation{
   display:block;
-  height:90px;
+  height:100px;
   @include background(image-url('misc/hc%20logo_full.svg'));
+  background-size: 30%;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: top center;
   background-color: $hcsoftwhite;
-  .nav{
-  display:none;
-  }
-  
-  @include at-breakpoint($medium) {
-  height:80px;
   position:fixed;
-  background: rgba(255,255,255,.6);
-  min-height: 60px;
   z-index:9999;
   width:100%;
+  @include at-breakpoint($medium) {
+  height:80px;
+  background: rgba(255,255,255,.6);
+  min-height: 60px;
+
   @include single-transition(all, .7s, ease-out);
-  ul.nav{
-    @include at-breakpoint($small){
-      @include horizontal-list;
-      font-family: $font-secondary, sans-serif;
-      float:right;
-      margin-right: 5%;
-      display:inline-block;
+}//medium
+    ul.nav{
+    @include horizontal-list;
+    font-family: $font-secondary, sans-serif;
+    float:right;
+    margin-right: 5%;
+    display:inline-block;
+    position:absolute;
+    bottom:0px;
+    width:100%;
+    background-color: darken($hcgrey,15%);
+    background-image: -webkit-linear-gradient(top, rgba(255,255,255, 0.05) 50%, rgba(0,0,0, 0.02) 53%);
+    @include at-breakpoint($medium) {
+    background-image:none;
+    position:inherit;
+    background-color: inherit;
+    width:auto;
+    
     }
     li{
-      
+      &:first-child{
+      margin-left: 3%;
+      a{
+        font-size:1.3rem;
+      }
+        @include at-breakpoint($medium) {
+      display: none;
+      margin-left: 0%;
+      }//medium
+    }//first-child
+    
       a{
         @include single-transition(all, .2s, ease-out);
         display: block;
         text-decoration: none;
-        padding: 5px 10px;
+        padding: 5px 5px;
         color: black;
-        line-height: 60px;
+        line-height: 20px;
+        font-size: .9rem;
+        @include at-breakpoint($medium) {
         font-size: 1.2rem;
+        line-height: 60px;
+        padding: 5px 10px;
+        }
         &:hover{
           color: $hcblue;
         }
-        
-      }//a
+        }//a
     }//li
   }//ul.nav
-}//medium
+
 }//nav
 
 
@@ -708,7 +735,23 @@ div:nth-of-type(1) .leaderimage{
 }//thirdrow
 
 
-
+//Sidebar
+.sb-left{
+  margin-top: 100px;
+  a{
+  text-decoration: none;
+  color:white;
+  }
+  li{
+  width:100%;
+  padding:2.5% 0% 2.5% 5%;
+  cursor: pointer;
+  font-size:1.1rem;
+  font-family: $font-secondary;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
 
 
 //FOOTER
@@ -774,6 +817,12 @@ height:100%;
     font-weight:200;
     margin-top:40px;
     }
+  .services{
+  margin-top:140px;
+  @include at-breakpoint($medium){
+  margin-top:0px;
+  }
+  }
 @include at-breakpoint($medium){
     @include span-columns(7,12);
     margin-top:20px;

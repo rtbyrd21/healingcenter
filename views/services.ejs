@@ -1,8 +1,10 @@
 <% include partials/template/head.ejs %>
 
 <body>
+<% include partials/template/navigation.ejs %>
+<div id="sb-site">
  <header>
-   <% include partials/template/navigation.ejs %>
+   
     <div class="hero">
     </div><!-- hero -->
    </header>
@@ -26,5 +28,15 @@
 </section>
 
  <% include partials/template/footer.ejs %>
+</div><!--Body container for slider logic-->
+
+<div class="sb-slidebar sb-left">
+    <ul>
+    <% appdata.services.forEach(function(item) { %>
+      <a href="/services/<%= item.shortname %>"><li><%= item.title %></li></a>
+    <% }); %>
+  </ul>
+
+<% include partials/template/sidebarlogic.ejs %>
  </body>
  </html>

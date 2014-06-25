@@ -79,6 +79,7 @@ $(".location").css({display: "none"});
 $(".thirdrow .promoitem:first-of-type").css({display: "none"});
 $("<div class=\"promoitem\"><h4>Partners</h4><p>If you need help with your job search, with skills to retain or adjust to your current job, or with finding fulfillment in your work, we\'re here to help.</p><br><a>Learn more</a></div>" ).appendTo( ".secondrow .hcpromo" );
 $("<div class=\"promoitem\"><h4>Location</h4><p>The Healing Center is located in Tri-County on Kemper Road, across from Target.<br><br>Click for map and directions.</p></div>" ).appendTo( ".thirdrow .hcpromo" );
+$("<div class=\"address\"><h4>Contact Information</h4><p>Healing Center Cincinnati<br>11345 Century Circle W.<br>Springdale, OH 45246<br>(513)346-4080</p><h4>Office Hours</h4><p>Tuesday - Friday, 8:30am - 5:00pm</p><h4>Service Hours</h4><p>Wednesday - Sat 9:00am - 12noon<br>Thursday evenings, 6:30-9pm</p></div>" ).appendTo( ".appendable" );
 $(".secondrow .promoitem:last-of-type").css({marginRight: "0px"});
 }  
   
