@@ -1,12 +1,12 @@
 
 $(document).ready(function() {
-    var sliderHeight = $('.hero').height();
+  $('.branding img').attr('src', '/images/misc/hc%20logo_full.svg');
     var $window = $(window);
     var $pane = $('#pane1');
+    var windowsize = $window.width();
     function checkWidth() {
-        var windowsize = $window.width();
         if (windowsize > 750) {
-         $('.branding img').attr('src', '/images/misc/hc%20logo_full.svg');
+         
 $(window).scroll(function () {
     if ($(document).scrollTop() < 290) {
         $('.branding img').attr('src', '/images/misc/hc%20logo_full.svg');
@@ -42,24 +42,12 @@ $(window).scroll(function () {
   $('.nav a').css('top', 50 + ((scrolledY)*.07) + '%');
   $('.leaderimage').css('background-position', 'left ' + (-(scrolledY)*.15) + 'px');
 }); //window scroll
+        }
 
-}else{
-  $('.branding img').css({display: "none"});
-}
-  //if windowsize
-}//checkWidth  
-// Execute on load
-    checkWidth();
-    // Bind event listener
-    $(window).resize(checkWidth);
-         
-//if ($(window).width() < 960) {
-//$('.artist').click(function(){
-//  $(this).css({height: "80%"});
-//
-//});
-//}
-if ($(window).width() < 750) {
+
+
+if (windowsize < 750) {
+$('.branding img').css({display: "none"});
 $(".artist .toHide").hide();
 //$(".artist a").hide();
 $(".artist").click(function(){
@@ -83,17 +71,13 @@ $("<div class=\"address\"><h4>Contact Information</h4><p>Healing Center Cincinna
 $(".secondrow .promoitem:last-of-type").css({marginRight: "0px"});
 }  
   
+} 
+
+checkWidth();
+// Bind event listener
+$(window).resize(checkWidth);  
   
 });//document on ready
-
-
-
-
-  
-
-
-
-
 
 
 
