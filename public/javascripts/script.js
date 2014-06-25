@@ -70,6 +70,19 @@ $(".artist").click(function(){
 
   });
 }
+  
+  
+  
+if ($(window).width() < 750) {
+$(".address").css({display: "none"});
+$(".location").css({display: "none"});
+$(".thirdrow .promoitem:first-of-type").css({display: "none"});
+$("<div class=\"promoitem\"><h4>Partners</h4><p>If you need help with your job search, with skills to retain or adjust to your current job, or with finding fulfillment in your work, we\'re here to help.</p><br><a>Learn more</a></div>" ).appendTo( ".secondrow .hcpromo" );
+$("<div class=\"promoitem\"><h4>Location</h4><p>The Healing Center is located in Tri-County on Kemper Road, across from Target.<br><br>Click for map and directions.</p></div>" ).appendTo( ".thirdrow .hcpromo" );
+$(".secondrow .promoitem:last-of-type").css({marginRight: "0px"});
+}  
+  
+  
 });//document on ready
 
 

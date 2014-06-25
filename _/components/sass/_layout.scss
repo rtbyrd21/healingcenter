@@ -14,6 +14,8 @@ $large          : 75em;
 
 //CONTENT
 .layout{
+  padding-left: 5px !important;
+  padding-right: 5px !important;
   @include container;
   margin-left: auto;
   margin-right: auto;
@@ -415,6 +417,7 @@ div:nth-of-type(1) .leaderimage{
      padding:9px;
       position:absolute;
       top:10px;
+      line-height: 1.5em;
      }
     @include at-breakpoint($medium){
     color:black;
@@ -441,7 +444,8 @@ div:nth-of-type(1) .leaderimage{
      p{
      padding-top:5px;
       position:absolute;
-      top:170px;
+     
+       top:170px;
      }
     a{
     display:block; 
@@ -503,15 +507,16 @@ div:nth-of-type(1) .leaderimage{
   }//promoitem
   
 .promoitem:nth-of-type(2){//JOBS TILE
+  background-color: $hcred;
   margin-right: 0%;
+  h4{
+    color:$hcred;
+      }
   @include at-breakpoint($medium) {
   margin-right: 1.69492%;
   @include background(image-url('artwork/jobs_bw.png'));
   background-repeat: no-repeat;
   background-color: white;
-    h4{
-    color:$hcred;
-      }
     a{
     color:$hcred;
     border-color: $hcred;
@@ -538,13 +543,14 @@ div:nth-of-type(1) .leaderimage{
   
   
 .promoitem:nth-of-type(3){//SUPPORT TILE
+  background-color: $hcblue;
+  h4{
+    color:$hcblue;
+      }
   @include at-breakpoint($medium) {
   @include background(image-url('artwork/donors_bw.png'));
   background-repeat: no-repeat;
   background-color: white;
-    h4{
-    color:$hcblue;
-      }
     a{
     color:$hcblue;
     border-color: $hcblue;
@@ -567,8 +573,14 @@ div:nth-of-type(1) .leaderimage{
      }//a
     }//promo hover
   }//medium
-  }//promoitem
- 
+  }//promoitem 3
+  
+.promoitem:nth-of-type(4){//SUPPORT TILE
+  background-color: $hcyellow;
+  h4{
+    color:$hcyellow;
+      }
+}
 }//hcpromo
 
 
@@ -583,6 +595,16 @@ div:nth-of-type(1) .leaderimage{
 
 //THIRD ROW//////////////
 .thirdrow{
+  .content{
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+  .promoitem:nth-of-type(2){
+   margin-right: 1.6%;
+  }
+  .promoitem:nth-of-type(3){
+   margin-right: 0%;
+  }
   @include at-breakpoint($medium){
   @include span-columns(12,12);
     margin-top:-45px;
@@ -726,9 +748,11 @@ footer{
 ////////////SERVICES//////////////////////
 
 .index {
+display: none;
   @include at-breakpoint($medium){
     @include span-columns(4,12);
 width:285px;
+display:inherit;
 background: $hcgrey;
 padding-left:10%;
 padding-top:20px;
@@ -744,14 +768,17 @@ height:100%;
 }//.index
 
 .offerings{
-@include at-breakpoint($medium){
-    @include span-columns(8,12);
-    margin-top:20px;
-    h3{
-    font-size:2.5rem;
+  h3{
+    font-size:2rem;
     color:darken($hcgrey,30);
     font-weight:200;
     margin-top:40px;
+    }
+@include at-breakpoint($medium){
+    @include span-columns(7,12);
+    margin-top:20px;
+    h3{
+    font-size:2.5rem;
     }
   p{
   &:last-of-type{
