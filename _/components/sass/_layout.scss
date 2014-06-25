@@ -764,16 +764,49 @@ footer{
   width:100%;
   }   
   li{
+  width:100%;
+  text-align: center;
+  @include at-breakpoint($medium){
+  width:auto;
+  }//medium
   float:left;
   font-size: 1em;
+  &:nth-of-type(1){
+  width:48%;
+    a{
+    float: right;
+    @include at-breakpoint($medium){
+    float: none;
+    }//medium
+    }
+  @include at-breakpoint($medium){
+  width:auto;
+  }//medium
+    
   }
-  li:last-of-type{
+  &:nth-of-type(2){
+  width:48%;
+    a{
+    float: left;
+    @include at-breakpoint($medium){
+    float: none;
+    }//medium
+    }
+  @include at-breakpoint($medium){
+  width:auto;
+  }//medium
+  }
+  &:last-of-type{
   float:right;
   color: white;
   font-size:.8em;
   }
+  
+  }
   .link{
+  @include at-breakpoint($medium){
   float:right;
+  }//middle
   color: white;
   font-size:.8em;
   text-decoration: none;
@@ -785,7 +818,8 @@ footer{
     color: $hcblue;
     }
   }
-}
+  
+}//footer
 
 
 ////////////SERVICES//////////////////////
@@ -811,14 +845,23 @@ height:100%;
 }//.index
 
 .offerings{
+  a{
+  text-decoration: none;
+  color:darken($hcgrey,30);
+  font-family: $font-secondary;
+  font-weight: 200;
+  }
   h3{
     font-size:2rem;
     color:darken($hcgrey,30);
     font-weight:200;
     margin-top:40px;
+    padding-left: 0px;
     }
   .services{
   margin-top:140px;
+  padding-left: 25px;
+
   @include at-breakpoint($medium){
   margin-top:0px;
   }
@@ -830,6 +873,7 @@ height:100%;
     font-size:2.5rem;
     }
   p{
+  padding-left: 0px !important;
   &:last-of-type{
   margin-bottom:40px;
   }

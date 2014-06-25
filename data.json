@@ -3,12 +3,12 @@
     "title" : "Assessments",
     "shortname" : "assessments",
     "summary" : "Everyone who comes into the Healing Center has the opportunity to speak to someone about what is going on in their life. We offer referrals and serve as an advocate by networking with community resources. It is not our intention to reinvent the wheel, but rather partner with organizations that are already doing good work in the community.",
-    "description" : "Long Description."
+    "description" : "No additional information yet."
     },{
     "title" : "Auto Clinic",
     "shortname" : "auto_clinic",
     "summary": "Volunteers evaluate car problems and make minor repairs. Labor is free, and the car owner pays for any needed parts. Oil changes are performed at a reduced cost. All services are performed on Saturdays.",
-    "description" : "Long Description."
+    "description" : "No additional information yet."
   },{
     "title" : "Auto Donation Program",
     "shortname" : "auto_donation_program",
@@ -17,15 +17,18 @@
   },{
     "title" : "Basic Needs",
     "shortname" : "basic_needs",
-    "summary": "We provide food to families in need, and gently used seasonal clothing and basic household items."
+    "summary": "We provide food to families in need, and gently used seasonal clothing and basic household items.",
+    "description" : "No additional information yet."
   },{
     "title" : "Bicycle Repair",
     "shortname" : "bicycle_repair",
-    "summary": "We repair donated bicycles and give them to Healing Center guests in need of transportation."
+    "summary": "We repair donated bicycles and give them to Healing Center guests in need of transportation.",
+    "description" : "<p><span>The Healing Center provides</span><span>help for the whole person</span><span> offering practical, social and spiritual support to individuals and families. &nbsp;O</span>ur bicycle service is one of the ways we provide support.</p><p><span>We repair donated bicycles and give them to Healing Center guests in need of transportation. We are also inviting volunteers to serve with us to repair bicycles. No experience with bike repair is needed, but is desirable. Tools are provided. Someone is usually available to assist with repair questions.</span></p><p><span>Repair Hours:</span></p><ul><li><span>Saturday mornings, 9am – noon </span></li><li><span>Thursday evenings, 6:30 – 9pm</span></li></ul><p>The repair work is done at the Healing Center during the above hours; you can serve as little or much as you like.</p><p><span>Bicycle donations</span><span> are also welcome. All sizes of bicycles in any condition are needed. If bikes are not repairable, they are stripped for usable parts and the rest of the bike is sold to help purchase needed parts.&nbsp;</span>Bicycles may be donated during “service hours” (below), or during office hours Tuesday – Friday from 9am to 5pm.</p><p>The Healing Center receives guests and provides services during the following hours:</p><ul><li><span>Wednesday – Saturday, 9am – noon</span></li><li><span>Thursday evenings, 6:30 – 9pm</span></li></ul><p><span>Please direct questions about the bicycle service to Don Hahn at dhahnj [at] zoomtown.com or</span>&nbsp;513-346-4080.</p>"
   },{
     "title" : "Childrens and Family programming",
     "shortname" : "childrens_and_family_programming",
-    "summary": "Attend programs, events, and classes that support the needs of children and families, like tutoring for kids, enrichment activities, family literacy, parenting support, and much more."
+    "summary": "Attend programs, events, and classes that support the needs of children and families, like tutoring for kids, enrichment activities, family literacy, parenting support, and much more.",
+    "description" : "No additional information yet."
   },{
     "title" : "Educational Programs",
     "shortname" : "educational_programs",
