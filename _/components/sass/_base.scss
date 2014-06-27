@@ -8,7 +8,6 @@ body{
   font-family: $font-primary;
   font-size: 1.2rem;
   line-height:160%;
-  background: white;
 }
 
 #{headings()} { 
@@ -52,11 +51,12 @@ a {
 }
 
 p{
-  font-weight: 200 !important;
+  font-weight: 400 !important;
   text-align: left;
   font-size:  .9rem;
-  line-height: 1.9;
+  line-height: 1.7;
   padding-right: 25px;
+  color: $softblack;
 
 }
 

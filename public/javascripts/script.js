@@ -1,6 +1,7 @@
 
 $(document).ready(function() {
   $('.branding img').attr('src', '/images/misc/hc%20logo_full.svg');
+  $('.heroservices').css('background-position', 'left ' + (-190) + 'px');
     var $window = $(window);
     var $pane = $('#pane1');
     var windowsize = $window.width();
@@ -23,7 +24,7 @@ $(window).scroll(function () {
     } else {
         $('.branding img').attr('src', '/images/misc/hc_logo_textonly.svg');
         $('.branding').css({marginBottom: "0px"});
-        $('.branding').css({top: "5px"});
+        $('.branding').css({top: "0px"});
         $('.branding').css({border: "0px"});
         $('.branding img').css({maxWidth: "320px"});
         $('.branding img').css({marginLeft: "-5%"});
@@ -33,12 +34,10 @@ $(window).scroll(function () {
         $('.navigation').css({background: "rgba(255,255,255,1)"});
         $('.navigation').css({boxShadow: "0px 0px 5px #333"});
     }
-
-
-                 
-                 
+    
    var scrolledY = $(window).scrollTop();
   $('.hero').css('background-position', 'left ' + ((scrolledY)) + 'px');
+  $('.heroservices').css('background-position', 'left ' + ((scrolledY)-190) + 'px');
   $('.nav a').css('top', 50 + ((scrolledY)*.07) + '%');
   $('.leaderimage').css('background-position', 'left ' + (-(scrolledY)*.15) + 'px');
 }); //window scroll
@@ -77,7 +76,60 @@ checkWidth();
 // Bind event listener
 $(window).resize(checkWidth);  
   
+  
+  
+//$(function() {
+//  $('.nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+//});
+
+
+var str=location.href.toLowerCase();
+$(".nav li a").each(function() {
+if (str.indexOf(this.href.toLowerCase()) > -1) {
+ $("li.active").removeClass("active");
+$(this).parent().addClass("active");
+}
+ });
+
+$('li.active:nth-of-type(3)').css({borderBottomColor: "#6bdb94"});
+  
+  
+$(function() {
+    var b = /services\/./.test( document.location.href );
+    if (b) {
+        console.log("yes");
+      $(window).scrollTop(450)
+    }
+});
+  
+
+  
 });//document on ready
+
+
+
+
+//HERO////////////
+
+$(document).ready(function(){
+    var i = 0;    
+    var stuff =["/images/misc/good_exteriorbrightfixed.jpg","/images/artwork/welcome-area.png"]; 
+    var imagecount = stuff.length;
+    $(".next").click(function(){
+         i = (imagecount + i - 1) % imagecount;
+        var change = (stuff[i]);
+        $('.hero').css({background: "url" + "(" + change + ")"});
+        $('.hero').css({backgroundSize: "cover"});
+    });
+    $(".prev").click(function(){
+        i = (imagecount + i - 1) % imagecount;
+        var change = (stuff[i]);
+        $('.hero').css({background: "url" + "(" + change + ")"});
+        $('.hero').css({backgroundSize: "cover"});
+    });
+});
+
+//HERO////////////
 
 
 
@@ -98,7 +150,4 @@ $(window).resize(checkWidth);
   });
       
       }
-      
-      
-     
-      google.maps.event.addDomListener(window, 'load', initialize);
+ google.maps.event.addDomListener(window, 'load', initialize);
